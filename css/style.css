@@ -1,0 +1,510 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header section styling */
+header {
+  display: flex;
+  /* Use flexbox for layout */
+  justify-content: space-between;
+  /* Space out items evenly */
+  align-items: center;
+  /* Vertically center items */
+  background-color: black;
+  /* Black background */
+  color: white;
+  /* White text */
+  padding: 15px 40px;
+  /* Inner spacing */
+  font-family: Arial, sans-serif;
+  /* Font style */
+}
+
+
+header h1 {
+  font-size: 28px;
+  font: oblique bold 120% cursive;
+  /* Type of font*/
+}
+
+/* Small star icon next to title */
+.icon-star {
+  width: 25px;
+  height: 25px;
+  margin-left: 0px;
+  vertical-align: middle;
+  /* Align with text */
+}
+
+header h2 {
+  font-size: 18px;
+  cursor: pointer;
+  /* Changes cursor to pointer on hover */
+}
+
+a {
+  color: white;
+  /* White text color */
+  text-decoration: none;
+  /* Remove underline */
+}
+
+/* Main container*/
+#main-box {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow items to wrap to new lines */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  gap: 30px;
+  /* Space between items */
+  padding: 60px 40px;
+  background: linear-gradient(0deg, #ffffff, #09ff00);
+  /* Green to black gradient background */
+}
+
+/* Each individual card inside main-box */
+#main-box>div {
+  display: flex;
+  flex-direction: column;
+  /* Stack content vertically */
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 35px;
+  /* Rounded corners */
+  padding: 20px;
+  transition: transform 0.2s ease;
+  /* Smooth hover animation */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  /* Black shadow */
+}
+
+/* Slight zoom effect when the mouse passes through a box*/
+#main-box>div:hover {
+  transform: scale(1.05);
+
+}
+
+/* Image styling inside each card */
+#main-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Title under each image */
+#main-box h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: black;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+#players-box {
+  display: flex;
+  gap: 2rem;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+/*Player list*/
+.players-list {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.players-list h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.players-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.players-list ul li {
+  background: #ffffff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.players-list ul li:hover {
+  background: #dcdcdc;
+  transform: scale(1.02);
+}
+
+/*Player addition form*/
+.players-section {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.players-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.players-section h3 {
+  margin: 5px 0;
+}
+
+.players-section label {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.players-section input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.players-section input[type="text"]:focus {
+  border-color: #0ba700;
+  box-shadow: 0 0 5px rgba(66, 135, 245, 0.5);
+}
+
+.players-section input[type="submit"] {
+  background: #0ba700;
+  color: white;
+  padding: 10px;
+  border: none;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.players-section input[type="submit"]:hover {
+  background: #2f6bdd;
+  transform: scale(1.03);
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.edit-btn {
+  background: #4287f5;
+  color: white;
+}
+
+.edit-btn:hover {
+  background: #2f5dbd;
+}
+
+.delete-btn {
+  background: #e63946;
+  color: white;
+}
+
+.delete-btn:hover {
+  background: #b72c37;
+}
+
+
+/* Form error messages styling */
+.error-message {
+  color: #ff4444;
+  margin-top: 3px;
+  display: block;
+  font-weight: bold;
+}
+
+/* Contact */
+/* ----------------------------------------------------
+   FORMULARIO DE CONTACTO EN index.html
+---------------------------------------------------- */
+
+.contact-section {
+  max-width: 600px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Caja del formulario */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Título */
+.contact-form h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #333;
+}
+
+/* Etiquetas */
+.contact-form label {
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* Inputs y textarea */
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s ease;
+  font-size: 15px;
+}
+
+/* Efecto focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #12ff01;
+  box-shadow: 0 0 6px rgba(18, 255, 1, 0.5);
+}
+
+/* Botón enviar */
+.contact-form input[type="submit"] {
+  background: #0ba700;
+  color: black;
+  border: none;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+/* Hover del botón */
+.contact-form input[type="submit"]:hover {
+  background: #0ba700;
+  transform: scale(1.03);
+}
+
+/* Mensajes de error */
+.error-message {
+  color: #ff4444;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+
+/* Decorative images of famous football players */
+.mbappe-decoration {
+  position: absolute;
+  /* Positioned absolutely so it stays in place*/
+  pointer-events: none;
+  /* Mouse events pass through */
+  left: 0;
+  bottom: 0px;
+  width: 300px;
+}
+
+.cristiano-decoration {
+  position: absolute;
+  pointer-events: none;
+  right: 0;
+  bottom: 0px;
+  width: 170px;
+}
+
+/* Footer container fixed at the bottom */
+#footer-box {
+  position: relative;
+  /*Relative to contain absolute elements inside*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* vertically center elements inside */
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 120px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-h5 {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: #aaa;
+}
+
+.footer-paragraph {
+  bottom: 0%;
+  left: 0%;
+  color: #aaa;
+  font-weight: bold;
+}
+
+/* Floating icon ball at the bottom right corner */
+.icon-ball {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 255, 47, 0.6);
+}
+
+/* Icon inside the floating ball */
+.icon-ball img {
+  width: 70%;
+  height: auto;
+}
+
+/* Slight zoom when hovering over the floating icon */
+.icon-ball:hover {
+  transform: scale(1.1);
+}
+
+
+/* For cellphones */
+@media (max-width: 600px) {
+  header {
+    padding: 10px 15px;
+  }
+
+  header h1 {
+    font-size: 20px;
+  }
+
+  header details summary {
+    font-size: 14px;
+  }
+
+  #main-box {
+    flex-direction: column;
+    /* Stack elements vertically */
+    align-items: center;
+  }
+
+  #footer-box {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 15px;
+  }
+
+  .footer-h5 {
+    position: static;
+    margin-bottom: 5px;
+  }
+
+  .icon-ball {
+    position: static;
+    margin-top: 10px;
+    box-shadow: none;
+  }
+
+  .mbappe-decoration {
+    display: none;
+    /* Doesn't show in mobile devices */
+  }
+
+  .cristiano-decoration {
+    display: none;
+  }
+
+  #players-box {
+    display: none;
+  }
+}
+
+
+/* For tablet screen */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
+
+  .main-menu {
+    justify-content: center;
+  }
+
+  #main-box {
+    gap: 20px;
+  }
+
+  section {
+    padding: 40px 20px;
+  }
+
+  .mbappe-decoration {
+    display: none;
+  }
+
+  .cristiano-decoration {
+    display: none;
+  }
+
+  #footer-box {
+    flex-direction: column;
+    height: auto;
+    padding: 30px 10px;
+    text-align: center;
+    gap: 5px;
+  }
+
+  #players-box {
+    display: none;
+  }
+
+  .icon-ball {
+    position: absolute;
+    background-color: white;
+    bottom: 10px;
+    box-shadow: none;
+  }
+
+  .footer-paragraph {
+    display: none;
+  }
+}
