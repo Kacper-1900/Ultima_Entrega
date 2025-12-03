@@ -1,0 +1,42 @@
+<!--HTML file to store contact info-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Contactos enviados</title>
+
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+  <header class="contact-header">
+    <h1>FutbolStars - Contactos</h1>
+    <a href="index.html">Volver</a>
+  </header>
+
+  <main class="contacts-container">
+
+    <section class="last-contact">
+      <h2>Último contacto enviado</h2>
+      <p><strong>Nombre:</strong> <span id="c-name"></span></p>
+      <p><strong>Email:</strong> <span id="c-email"></span></p>
+      <p><strong>Asunto:</strong> <span id="c-subject"></span></p>
+      <p><strong>Mensaje:</strong> <span id="c-message"></span></p>
+      <p><strong>Fecha:</strong> <span id="c-createdAt"></span></p>
+    </section>
+
+
+    <section class="history-contact">
+      <h3>Historial de contactos</h3>
+      <ul id="all-contacts-list"></ul>
+    </section>
+
+
+    <script src="js/script.js"></script>
+  </main>
+
+</body>
+
+</html>

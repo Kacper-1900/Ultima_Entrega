@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FutbolStars</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <header>
+    <!--Business name-->
+    <h1 style="color: #12ff01">FutbolStars
+      <img src="img/estrella-image.png" alt="No image detected." class="icon-star">
+    </h1>
+
+    <!--This section operates the interactive menu, contactanos and ¿Donde estamos? buttons.-->
+    <details>
+      <summary style="font-weight: bold;">Menú</summary>
+      <a href="https://www.mundodeportivo.com/futbol">
+        <p>Noticias recientes</p>
+      </a>
+      <a href="https://www.futbolemotion.com/es/categoria/productos-oficiales/tipo-de-prenda/camisetas">
+        <p>Camisetas Oficiales</p>
+      </a>
+      <a href="https://www.futbolemotion.com/es/accesorios-de-futbol">
+        <p>Accesorios de futbol</p>
+      </a>
+    </details>
+
+    <details>
+      <summary style="font-weight: bold;">Contáctanos</summary>
+      <p>+34 699 999 999</p>
+      <p>FutbolStarsOficial@gmail.com</p>
+    </details>
+
+    <details>
+      <summary style="font-weight: bold;">¿Donde estamos?</summary>
+      <p>Centro Comercial Las Terrazas, CC Las terrazas, GC-1, km.5 5, 35220 Telde, Las Palmas</p>
+    </details>
+    <a href="https://dribbble.com/shots/26673246-Hooligans-Soccer-Wordmark-Concepts">
+      <h2>Inspiración</h2>
+    </a>
+
+  </header>
+  <!--Box section, all images, links and names of the clubs-->
+  <div id="main-box">
+    <div class="madrid-box">
+      <img id="rmd" src="img/rmd-image.png" alt="No image detected." style="width: 100px;">
+      <h3>Real Madrid</h3>
+    </div>
+
+    <div class="fcb-box">
+      <img id="fcb" src="img/fcb-image.png" alt="No image detected." style="width: 130px;">
+      <h3>Barcelona</h3>
+    </div>
+
+    <div class="atm-box">
+      <img id="atm" src="img/atm-image.png" alt="No image detected." style="width: 190px; height: 140px;">
+      <h3>Atletico Madrid</h3>
+    </div>
+
+    <div class="psg-box">
+      <img id="psg" src="img/psg-image.png" alt="No image detected." style="width: 140px;">
+      <h3>Paris Saint-Germaint</h3>
+    </div>
+
+    <div class="lyon-box">
+      <img id="lyon" src="img/oll-image.png" alt="No image detected." style="width: 110px;">
+      <h3>Olimpique de Lyon</h3>
+    </div>
+
+    <div class="marseille-box">
+      <img id="marseille" src="img/oms-image.png" alt="No image detected." style="width: 110px;">
+      <h3>Olimpique de Marseille</h3>
+    </div>
+
+    <div class="mutd-box">
+      <img id="mutd" src="img/mutd-image.png" alt="No image detected." style="width: 140px;">
+      <h3>Manchester United</h3>
+    </div>
+    <div class="mcity-box">
+      <img id="mcity" src="img/mcity-image.png" alt="No image detected." style="width: 140px;">
+      <h3>Manchester City</h3>
+    </div>
+
+    <div class="arsenal-box">
+      <img id="arsenal" src="img/arsenal-image.png" alt="No image detected." style="width: 130px;">
+      <h3> Arsenal</h3>
+    </div>
+
+
+    <div class="liverpool-box">
+      <img id="liverpool" src="img/liverpool-image.png" alt="No image detected." style="width: 110px;">
+      <h3>Liverpool</h3>
+    </div>
+
+
+  </div>
+  <!--Section to show the list of players added-->
+  <div id="players-box">
+    <section class="players-list">
+      <h2>Players List</h2>
+      <div>
+        <ul id="all-players"></ul>
+      </div>
+    </section>
+    <!--Section to add new players to the list-->
+    <section class="players-section">
+      <form id="add-player-form">
+        <h3><label for="add-player-jersey-number">Numero</label></h3>
+        <input type="text" name="add-player-jersey-number" id="add-player-jersey-number">
+        <span class="error-message" id="error-number"></span>
+
+        <label for="add-player">Nombre</label>
+        <input type="text" id="add-player" name="add-player">
+        <span class="error-message" id="error-name"></span>
+
+        <label for="add-player-position">Posicion</label>
+        <input type="text" id="add-player-position" name="add-player-position">
+        <span class="error-message" id="error-position"></span>
+
+        <label for="add-player-club">Club</label>
+        <input type="text" name="add-player-club" id="add-player-club">
+        <span class="error-message" id="error-club"></span>
+
+        <input type="submit" value="Enviar">
+
+      </form>
+    </section>
+  </div>
+
+  <!--Contact section -->
+  <section class="contact-section">
+    <form id="contact-form" class="contact-form">
+      <h3>Contáctanos</h3>
+
+      <label for="contact-name">Nombre</label>
+      <input type="text" id="contact-name" name="contact-name">
+      <span class="error-message" id="error-contact-name"></span>
+
+      <label for="contact-reason">Asunto</label>
+      <input type="text" id="contact-reason" name="contact-reason">
+      <span class="error-message" id="error-contact-reason"></span>
+
+      <label for="contact-email">Email</label>
+      <input type="text" id="contact-email" name="contact-email">
+      <span class="error-message" id="error-contact-email"></span>
+
+      <label for="contact-message">Mensaje</label>
+      <textarea id="contact-message" name="contact-message" rows="4"></textarea>
+      <span class="error-message" id="error-contact-message"></span>
+
+      <input type="submit" value="Enviar">
+    </form>
+  </section>
+
+  <!--Footer box to add a usable button and copyright-->
+  <footer>
+
+    <div id="footer-box">
+
+      <h5 class="footer-h5">2025 FutbolStars | All rights reserved.</h5>
+      <p class="footer-paragraph">Página afiliada a FutbolEmotion.</p>
+      <a href="" class="icon-ball">
+        <img src="img/balon-image.png" alt="No image detected.">
+      </a>
+
+    </div>
+
+  </footer>
+
+  <!--Decorative images of famous football players-->
+
+  <img src="img/mbappe-image.png" alt="No image detected." class="mbappe-decoration">
+  <img src="img/cristiano-image.png" alt="No image detected." class="cristiano-decoration">
+
+
+
+  <script src="js/script.js"></script> <!-- Conection with the .js file so the links work properly -->
+</body>
+
+</html>
